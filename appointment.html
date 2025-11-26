@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appointment — VANthu Clinic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="animation.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="index.html">VANthu Clinic</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="appointment.html" class="active">Appointment</a>
+        <a href="products.html">Products</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section appt-grid">
+    <div data-aos="fade-right">
+      <h1>Book Appointment</h1>
+      <p class="muted">Fill your details — we will confirm by phone or email.</p>
+
+      <div class="card help-card" data-aos="fade-up" data-aos-delay="80">
+        <p><strong>Tip:</strong> Add a working email so we can send appointment confirmation.</p>
+      </div>
+    </div>
+
+    <div data-aos="fade-left">
+      <form id="appointmentForm" class="card form-card"
+            action="https://formspree.io/f/meobjqlr"
+            method="POST">
+
+        <div class="row">
+          <label>Name <input name="name" type="text" required /></label>
+          <label>Age <input name="age" type="number" required /></label>
+        </div>
+
+        <div class="row">
+          <label>Email <input name="email" type="email" required /></label>
+          <label>Phone <input name="phone" type="tel" pattern="[0-9]{10}" required /></label>
+        </div>
+
+        <div class="row">
+          <label>Gender
+            <select name="gender" required>
+              <option value="">Select</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label>Preferred Doctor
+            <select name="doctor">
+              <option value="">Any</option>
+              <option>Dr. Alwin Kumar</option>
+              <option>Dr. Priya R.</option>
+              <option>Dr. Ravi S.</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="row">
+          <label>Appointment Date <input name="date" type="date" required /></label>
+          <label>Appointment Time <input name="time" type="time" required /></label>
+        </div>
+
+        <label>Notes (optional)
+          <textarea name="notes" rows="3"></textarea>
+        </label>
+
+        <!-- recommended hidden fields for Formspree -->
+        <input type="hidden" name="_subject" value="New Appointment Request — VANthu Clinic" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_replyto" value="" id="apptReplyToField" />
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Submit</button>
+          <button type="reset" class="btn-outline">Reset</button>
+        </div>
+
+        <p id="apptResponse" class="response"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year2"></span> VANthu Clinic</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

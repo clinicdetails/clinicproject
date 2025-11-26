@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VANthu Clinic — Home</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="animation.css" />
+
+  <!-- AOS (scroll reveal) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="index.html">VANthu Clinic</a>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="appointment.html">Appointment</a>
+        <a href="products.html">Products</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left" data-aos="fade-up" data-aos-delay="100">
+          <h1 class="hero-title">Caring for every life — modern, compassionate healthcare</h1>
+          <p class="lead">Personalised treatment, experienced doctors, and fast appointments. Book now or browse products for home care.</p>
+          <div class="hero-ctas">
+            <a class="btn" href="appointment.html">Book Appointment</a>
+            <a class="btn-outline" href="products.html">Shop Products</a>
+          </div>
+
+          <!-- heartbeat strip -->
+          <div class="heartbeat-wrap" aria-hidden="true">
+            <svg class="heartbeat-svg" viewBox="0 0 120 30" preserveAspectRatio="none">
+              <polyline class="heartbeat-line" points="0,15 20,15 24,10 30,20 36,15 48,15 52,5 56,25 62,15 120,15"></polyline>
+            </svg>
+            <div class="muted small">24/7 monitoring • Trusted care</div>
+          </div>
+        </div>
+
+        <div class="hero-right" data-aos="zoom-in" data-aos-delay="200">
+          <div class="hero-3d" id="hero3d">
+            <!-- floating medical icons -->
+            <img src="assets/icon-stethoscope.svg" class="float-icon icon-1" alt="">
+            <img src="assets/icon-pills.svg" class="float-icon icon-2" alt="">
+            <img src="assets/icon-heart.svg" class="float-icon icon-3" alt="">
+
+            <!-- main illustration (replace later) -->
+            <img src="assets/illustration-hero.svg" alt="clinic illustration" class="hero-illustration" id="heroIllustration">
+            
+            <!-- subtle pulse glow -->
+            <div class="pulse-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCTORS -->
+    <section class="container section" data-aos="fade-up" data-aos-delay="120">
+      <h2>Meet Our Doctors</h2>
+      <div class="doctors-grid">
+        <article class="doctor-card" data-aos="fade-right" data-aos-delay="140">
+          <img src="assets/doctor1.jpg" alt="Dr. Alwin" />
+          <h3>Dr. Alwin Kumar</h3>
+          <p>MBBS, MD — General Medicine. 12 years experience.</p>
+        </article>
+
+        <article class="doctor-card" data-aos="fade-up" data-aos-delay="160">
+          <img src="assets/doctor2.jpg" alt="Dr. Priya" />
+          <h3>Dr. Priya R.</h3>
+          <p>MBBS, DGO — Obstetrics & Gynaecology. 8 years experience.</p>
+        </article>
+
+        <article class="doctor-card" data-aos="fade-left" data-aos-delay="180">
+          <img src="assets/doctor3.jpg" alt="Dr. Ravi" />
+          <h3>Dr. Ravi S.</h3>
+          <p>MBBS, MS — Orthopedics. 10 years experience.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES / FEATURES -->
+    <section class="container section features-grid" data-aos="fade-up" data-aos-delay="200">
+      <div class="feature" data-aos="flip-left" data-aos-delay="220">
+        <div class="feature-icon">🏥</div>
+        <h4>In-Clinic Consultations</h4>
+        <p class="muted">Family doctors and specialists available daily.</p>
+      </div>
+      <div class="feature" data-aos="flip-left" data-aos-delay="240">
+        <div class="feature-icon">📦</div>
+        <h4>Home Delivery</h4>
+        <p class="muted">Medicines & essentials delivered quickly.</p>
+      </div>
+      <div class="feature" data-aos="flip-left" data-aos-delay="260">
+        <div class="feature-icon">🩺</div>
+        <h4>Trusted Care</h4>
+        <p class="muted">Experienced medical staff and clean facilities.</p>
+      </div>
+    </section>
+
+    <section class="container section contact-strip" data-aos="fade-up">
+      <div>
+        <h3>Contact Us</h3>
+        <p>Phone: +91-90000-00000 • Email: info@vanthuclinic.com</p>
+      </div>
+      <div>
+        <a class="btn-outline" href="appointment.html">Book Now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> VANthu Clinic — All rights reserved</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
