@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products — VANthu Clinic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="animation.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="index.html">VANthu Clinic</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="appointment.html">Appointment</a>
+        <a href="products.html" class="active">Products</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section">
+      <div class="shop-head" data-aos="fade-up">
+        <h1>VANthu Products</h1>
+        <div>
+          <button id="viewCartBtn" class="btn">View Cart (<span id="cartCount">0</span>)</button>
+        </div>
+      </div>
+
+      <div id="productsGrid" class="products-grid" data-aos="fade-up"></div>
+
+      <section id="checkoutArea" class="card checkout-card" data-aos="fade-up" data-aos-delay="80">
+        <h2>Checkout</h2>
+
+        <form id="checkoutForm"
+              action="https://formspree.io/f/xovoaqnp"
+              method="POST">
+
+          <div class="row">
+            <label>Customer name <input name="custName" type="text" required /></label>
+            <label>Phone <input name="custPhone" type="tel" pattern="[0-9]{10}" required /></label>
+          </div>
+
+          <label>Delivery Address
+            <textarea name="address" rows="3" required></textarea>
+          </label>
+
+          <div class="row">
+            <label>Payment method
+              <select name="payment" required>
+                <option value="">Select</option>
+                <option>Cash on Delivery</option>
+                <option>UPI / Bank transfer</option>
+              </select>
+            </label>
+
+            <div class="cart-summary" id="cartSummary">
+              <!-- cart summary injected -->
+            </div>
+          </div>
+
+          <!-- hidden field to send the items to Formspree -->
+          <textarea id="orderItemsField" name="orderItems" hidden></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Place Order</button>
+          </div>
+
+          <p id="orderResponse" class="response"></p>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <!-- cart modal -->
+  <div id="cartModal" class="cart-modal">
+    <div class="cart-modal-inner">
+      <button id="closeCart" class="close-x">&times;</button>
+      <h3>Your Cart</h3>
+      <div id="cartList"></div>
+      <div class="cart-actions">
+        <button id="clearCart" class="btn-outline">Clear Cart</button>
+        <button id="checkoutNow" class="btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year3"></span> VANthu Products</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
